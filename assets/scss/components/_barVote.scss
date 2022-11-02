@@ -1,0 +1,121 @@
+.barVote {
+    @include base-flex(flex, stretch, center);
+    width: 100%;
+    font-weight: $font-weight-bold;
+
+    @include mobile-min {
+        
+
+        &__name {
+            flex-basis: 150px;
+            order: 1;
+        }
+        &__left {
+            flex-basis: 150px;
+            order: 2;
+        }
+        &__right {
+            flex-basis: 150px;
+            order: 4;
+        }
+        &__percentWrapper {
+            flex-basis: auto;
+            flex-grow: 1;
+            order: 3;
+        }
+        &__counted {
+            flex-basis: 110px;
+            order: 5;
+        }
+    }
+    @include mobile-max {
+        flex-wrap: wrap;
+        &__name {
+            
+            flex-basis: auto;
+            flex-grow: 1;
+            order: 1;
+            
+        }
+        &__left {
+            
+            flex-basis: 50%;
+            order: 3;
+        }
+        &__right {
+            
+            flex-basis: 50%;
+            order: 4;
+        }
+        &__percentWrapper {
+            
+            flex-basis: 100%;
+            order: 5;
+        }
+        &__counted {
+            
+            flex-basis: auto;
+            order: 2;
+        }
+    }
+
+    &__name {
+        height: 40px;
+        padding: $spacers-s $spacers-m;
+        background-color: $color-offWhite;
+        border-top: 1px solid $color-greyLight;
+        border-bottom: 1px solid $color-greyLight;
+    }
+    &__left {
+        height: 40px;
+        color: $color-red;
+        padding: $spacers-s $spacers-m;
+        border-top: 1px solid $color-greyLight;
+        border-bottom: 1px solid $color-greyLight;
+    }
+    &__right {
+        height: 40px;
+        color: $color-green;
+        padding: $spacers-s $spacers-m;
+        border-top: 1px solid $color-greyLight;
+        border-bottom: 1px solid $color-greyLight;
+    }
+    &__percentWrapper {
+        height: 40px;
+        position: relative;
+        color: $color-white;
+        padding: $spacers-s $spacers-m;
+        border-top: 1px solid $color-greyLight;
+        border-bottom: 1px solid $color-greyLight;
+
+        &::after {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 50%;
+           border: 1px solid yellow;
+           height: 100%; 
+        }
+    }
+    &__percent {
+        &--left {
+            background-color: $color-red;
+        }
+        &--right {
+            background-color: $color-green;
+        }
+    }
+    &__counted {
+        height: 40px;
+        color: $color-greyDark;
+        font-weight: $font-weight-regular;
+        padding: $spacers-s $spacers-m;
+        background-color: $color-offWhite;
+        border-top: 1px solid $color-greyLight;
+        border-bottom: 1px solid $color-greyLight;
+    }
+
+    &__img {
+        max-width: 40px;
+    }
+}

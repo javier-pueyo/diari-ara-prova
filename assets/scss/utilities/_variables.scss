@@ -23,7 +23,7 @@ $opacity-low: 0.2;
 $border-radius: spToRem(8) !default;
 
 //Space
-$spacers: spToRem(4) !default;
+$spacers: spToRem(5) !default;
 $spacers-s: ($spacers) + rem;
 $spacers-m: ($spacers * 2) + rem;
 $spacers-l: ($spacers * 4) + rem;

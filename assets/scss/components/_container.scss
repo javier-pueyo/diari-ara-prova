@@ -1,0 +1,11 @@
+.container {
+    padding: $container-padding-x;
+    width: 100%;
+    max-width: 1400px;
+    height: 100vh;
+    margin: 0 auto;
+
+    &--center {
+    @include base-flex(flex, center, center);
+    }
+}
