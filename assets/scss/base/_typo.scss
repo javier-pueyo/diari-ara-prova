@@ -1,0 +1,45 @@
+// =============================================================================
+// _typo.scss : Default classes for Project
+// MIT License
+// =============================================================================
+
+// =============================================================================
+// _typo.scss settings
+// =============================================================================
+
+@font-face{
+  font-family: ringside-narrow;
+  src:url("https://s1static.ara.cat/interactius/assets/common_new/fonts/Ringside/RingsideNarrow-Book.otf") format("otf");
+  font-style:normal;
+  font-weight:400;
+  font-display:block;
+}
+@font-face{
+  font-family: ringside-narrow;
+  src:url("https://s1static.ara.cat/interactius/assets/common_new/fonts/Ringside/RingsideNarrow-Bold.otf") format("otf");
+  font-style:normal;
+  font-weight:700;
+  font-display:block;
+}
+
+/* Typography */
+
+body {
+  text-rendering: optimizeLegibility;
+  font-family: 'ringside-narrow', sans-serif;
+  color: $color-black;
+  @include base-typo(16, $font-weight-regular, 0);
+  line-height: $line-height-base;
+  background-color: $color-white;
+}
+
+p {
+  margin: 0;
+}
+
+.base-body {
+  @include base-typo(16, $font-weight-regular, 0);
+}
+.base-body-small {
+  @include base-typo(14, $font-weight-regular, 0);
+}
