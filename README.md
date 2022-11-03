@@ -22,6 +22,11 @@ El directori d'arxius està format per:
 2. **SCSS** `/assets/*scss`. En el html s'utilitza el css comprimit: *main.min.css*
 3. **HTML**. Solament s'utilitza l'arxiu *index.html*
 
+Com la prova es tractava de html i css vaig fer solament una simulació de com s'afegiria el percentatge dels vots. Es va utilitzar estils inline simulant que mitjançant l'atribut `vote-percent` s'inclou el valor del percentatge i mitjançant javascript es crea dinàmicament els estils `width:51.2%`.
+```sh
+<div class="barVote__percent--left" vote-percent="51.2" style="width:51.2%">51,2%</div>
+```
+
 ## HTML
 
 El component comença des del tag:
